@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="it"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Timbratore CCC</title>
+<meta name="theme-color" content="#2f7d86">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Timbratore CCC">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="manifest" href="manifest-timbratore.webmanifest">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="favicon.png">
+<style>
+  html, body { margin:0; height:100%; background:#f7f1e6; overflow:hidden; }
+  iframe { position:fixed; inset:0; width:100%; height:100%; border:0; background:#f7f1e6; }
+  #splash { position:fixed; inset:0; z-index:5; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:18px; background:linear-gradient(135deg,#3f9aa1,#2f7d86); color:#fff; font-family:system-ui,-apple-system,sans-serif; text-align:center; padding:24px; transition:opacity .3s; }
+  #splash.off { opacity:0; pointer-events:none; }
+  #splash img { width:min(60vw,260px); height:auto; }
+  #msg { font-weight:700; font-size:15px; opacity:.9; max-width:320px; }
+</style></head>
+<body>
+<div id="splash"><img src="icon-192.png" alt="Crazy Cat Café" style="border-radius:28px"><div id="msg">Carico…</div></div>
+<iframe id="f" title="Timbratore CCC" allow="clipboard-write; fullscreen" referrerpolicy="no-referrer"></iframe>
+<script src="config.js"></script>
+<script>window.APP_EXTRA='v=timbratore';</script>
+<script src="app.js"></script>
+</body></html>
